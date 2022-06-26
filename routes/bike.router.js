@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const { addBike } = require('../controller/bike.controller');
+const { AddBike, GetAllBikes, GetAllBikesPagination } = require('../controller/bike.controller');
 
-router.post('/bike/add-bike', addBike);
+router.post('/bike/add-bike', AddBike);
+router.get('/bike/all-bikes', GetAllBikes);
+router.get('/bike/all-bikes/pagination', GetAllBikesPagination);
 module.exports = router;
